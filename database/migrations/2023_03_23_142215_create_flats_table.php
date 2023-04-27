@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('flats', function (Blueprint $table) {
             $table->id();
+            /** @noinspection UnknownColumnInspection */
             $table->string('shortName')->nullable(false)->unique('shortName');
             $table->string('comune')->nullable(false);
             $table->string('cap')->nullable(false);
