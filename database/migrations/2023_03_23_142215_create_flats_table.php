@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('immobili', function (Blueprint $table) {
+        Schema::create('flats', function (Blueprint $table) {
             $table->id();
             $table->string('shortName')->nullable(false)->unique('shortName');
             $table->string('comune')->nullable(false);
@@ -21,11 +21,9 @@ return new class extends Migration
             $table->unsignedInteger('foglio')->nullable();
             $table->unsignedInteger('particalla')->nullable();
             $table->unsignedInteger('subalterno')->nullable();
-            $table->string("proprietario")->nullable(false);
-            $table->string('usufruttuario')->nullable();
-            $table->date('possesso');
-            $table->date('compromesso');
-            $table->date('rogito');
+            $table->date('possesso')->nullable();
+            $table->date('compromesso')->nullable();
+            $table->date('rogito')->nullable();
             $table->timestamps();
         });
     }
