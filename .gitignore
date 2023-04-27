@@ -23,3 +23,6 @@ Homestead.json
 .phpunit.result.cache
 /storage/logs/
 /.idea
+/public/css/app.css
+/public/js/app.js
+/public/js/app.js.LICENSE.txt
